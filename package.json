@@ -1,0 +1,14 @@
+{
+  "name": "project-aca",
+  "version": "1.0.0",
+  "description": "Another Chance for Animals",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "start": "npm run watch:all",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin index.html -d dist --htm
